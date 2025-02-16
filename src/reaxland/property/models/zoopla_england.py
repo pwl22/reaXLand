@@ -20,8 +20,9 @@ class Model(BaseModel):
         self,
         features: "reaxland.property.base.PropertyFeatures",  # type: ignore[name-defined]
         year: int,
+        rng: np.random.Generator,
     ) -> float:
         # TODO: Consider not having to extract features in each model instance
         # i.e. do it somehow in base class
         extracted_features = self.features_adapter(features)
-        return np.random.uniform(100000, 500000)
+        return rng.uniform(100_000, 1_000_000)

@@ -1,5 +1,7 @@
 from abc import ABC, abstractmethod
 
+import numpy as np
+
 # if TYPE_CHECKING:
 #     from reaxland.property.base import PropertyFeatures
 
@@ -19,5 +21,6 @@ class BaseModel(ABC):
         self,
         features: "reaxland.property.base.PropertyFeatures",  # type: ignore[name-defined]
         year: int,
+        rng: np.random.Generator,
     ) -> float:
         pass

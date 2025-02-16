@@ -54,10 +54,11 @@ class ReaXLand(ParallelEnv[str, Any, np.int64]):
     ) -> tuple[Observation, Info]:
         """Resets the environment to its initial state."""
         self.agents = copy(self.possible_agents)
+        np.random.seed(seed)
 
         self.timestep = 0
         for prop in self.properties:
-            prop.reset(self.timestep)
+            prop.reset(self.timestep, seed)
 
         self.cash_balance: dict[str, float] = {
             agent: 100_000.0 for agent in self.agents

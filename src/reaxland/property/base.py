@@ -40,13 +40,9 @@ class Property:
         self._year = start_year
         self._price_model = price_model
 
-        # Internal selling price of house
-        # Not visible to agent unless in selling state
-        self._price = self._price_model.predict_price(self._features, self._year)
-
     def predict_price(self, year: int) -> None:
         """Calls price model, but makes adjustments based on simulated environment"""
-        self._price *= np.random.uniform(0.98, 1.02)
+        self._price *= self._rng.uniform(0.98, 1.02)
 
     def last_selling_price(self) -> float:
         """Returns the last/current selling price of the property.
@@ -74,11 +70,17 @@ class Property:
         self._bought_details = None
         return profit
 
-    def reset(self, year: int) -> None:
+    def reset(self, year: int, seed: int | None) -> None:
         """Resets property state for new episodes."""
-        self.predict_price(year)
         self._year = year
         self._bought_details = None
+        self._rng = np.random.default_rng(seed)
+
+        # Internal selling price of house
+        # Not visible to agent unless in selling state
+        self._price = self._price_model.predict_price(
+            features=self._features, year=self._year, rng=self._rng
+        )
 
     def step(self, year: int) -> None:
         """Simulates a time step."""
