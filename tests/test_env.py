@@ -32,9 +32,9 @@ def test_sell_action() -> None:
     env.reset(seed=42)
 
     env.step({"investor_agent": np.int64(1)})
-    assert env.cash_balance["investor_agent"] < 100_000.0
+    assert env.cash_balance["investor_agent"] < 50_000.0
     env.step({"investor_agent": np.int64(2)})
-    assert env.cash_balance["investor_agent"] >= 100_000.0
+    assert env.cash_balance["investor_agent"] >= 50_000.0
 
 
 def test_render(capfd: pytest.CaptureFixture[str]) -> None:

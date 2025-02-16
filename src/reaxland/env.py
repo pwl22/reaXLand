@@ -76,6 +76,8 @@ class ReaXLand(ParallelEnv[str, Any, np.int64]):
         investor_agent_action = actions["investor_agent"]
         rewards: dict[str, float] = {a: 0.0 for a in self.agents}
 
+        self.timestep += 1
+
         for i, prop in enumerate(self.properties):
             if prop.owner is not None:
                 rewards[prop.owner] -= (
@@ -94,6 +96,8 @@ class ReaXLand(ParallelEnv[str, Any, np.int64]):
                 self.cash_balance["investor_agent"] += prop.last_selling_price()
                 rewards["investor_agent"] += profit * REWARD_HYPERPARAMS["sale_profit"]
 
+            prop.step(self.timestep)
+
         for agent in self.agents:
             rewards[agent] += (
                 self.cash_balance[agent] * REWARD_HYPERPARAMS["liquidity_reward"]
@@ -101,8 +105,6 @@ class ReaXLand(ParallelEnv[str, Any, np.int64]):
 
         terminations = {agent: False for agent in self.agents}
         truncations = {agent: False for agent in self.agents}
-
-        self.timestep += 1
 
         observations = self._get_obs()
         infos = self._get_info()
