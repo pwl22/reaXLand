@@ -1,5 +1,44 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import imageSaleSign from '../assets/House-and-man.jpeg'
+// Make sure you have react-router-dom installed and configured for your routes
+import { Link } from 'react-router-dom'
+
+function Footer() {
+  return (
+    <footer className="bg-gray-100 text-gray-700 py-6 mt-12">
+      <div className="container mx-auto px-4">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
+          {/* Left Section: Address & Basic Legal Info */}
+          <div className="mb-4 md:mb-0">
+            <h2 className="text-lg font-semibold">Imperial College London</h2>
+            <p className="text-sm">
+              Exhibition Rd, South Kensington
+              <br />
+              London SW7 2BX, United Kingdom
+            </p>
+            <p className="mt-2 text-xs text-gray-600">
+              © {new Date().getFullYear()} LeftMove. All rights reserved.
+              <br />
+              All information is provided for educational purposes and does not
+              constitute legal or financial advice.
+            </p>
+          </div>
+
+          {/* Right Section: Link to Contact */}
+          <div>
+            <Link
+              to="/contact"
+              className="inline-block px-4 py-2 text-sm bg-primary-600 text-white font-medium rounded-md hover:bg-primary-700 transition-colors"
+            >
+              Contact Us
+            </Link>
+          </div>
+        </div>
+      </div>
+    </footer>
+  )
+}
 
 function Problem() {
   return (
@@ -33,8 +72,8 @@ function Problem() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-lg md:text-xl max-w-2xl mx-auto"
           >
-            Discover how machine learning powers informed decisions in real estate 
-            investing—minimizing risks and maximizing returns.
+            Discover how machine learning powers informed decisions in real
+            estate investing—minimizing risks and maximizing returns.
           </motion.p>
         </div>
       </header>
@@ -54,23 +93,24 @@ function Problem() {
               Current Challenges in Real Estate
             </h2>
             <p className="text-gray-700 mb-4">
-              Investing in real estate can be daunting—especially for newcomers. 
-              Property prices, market volatility, and complex regulations often 
-              leave first-time investors overwhelmed. Even seasoned investors find 
-              it challenging to consistently identify profitable opportunities 
-              amidst changing economic conditions.
+              Investing in real estate can be daunting—especially for newcomers.
+              Property prices, market volatility, and complex regulations often
+              leave first-time investors overwhelmed. Even seasoned investors
+              find it challenging to consistently identify profitable
+              opportunities amidst changing economic conditions.
             </p>
             <p className="text-gray-700">
-              Without the right insights, it's easy to pour time and money into 
-              ventures that don't yield the expected returns. Understanding these 
-              challenges is the first step to making informed and confident decisions.
+              Without the right insights, it's easy to pour time and money into
+              ventures that don't yield the expected returns. Understanding
+              these challenges is the first step to making informed and
+              confident decisions.
             </p>
           </div>
 
           {/* Image */}
           <div className="w-full">
             <img
-              src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=800"
+              src={imageSaleSign}
               alt="Challenges in Real Estate"
               className="rounded-lg shadow-lg w-full h-auto object-cover"
             />
@@ -102,23 +142,24 @@ function Problem() {
               Multiple Approaches to Real Estate Investing
             </h2>
             <p className="text-gray-700 mb-4">
-              There isn’t a one-size-fits-all method for real estate investing. 
-              Some investors focus on flipping properties for quick profit, 
-              others prefer long-term rental income, while some invest in 
-              REITs (Real Estate Investment Trusts) to diversify their portfolios.
+              There isn’t a one-size-fits-all method for real estate investing.
+              Some investors focus on flipping properties for quick profit,
+              others prefer long-term rental income, while some invest in REITs
+              (Real Estate Investment Trusts) to diversify their portfolios.
             </p>
             <p className="text-gray-700 mb-4">
-              For instance, you might choose <strong>house flipping</strong> if 
-              you’re interested in renovating properties for substantial, 
-              shorter-term gains. Alternatively, 
-              <strong> rental properties</strong> can provide steady cash flow over time. 
-              And for those who want a more hands-off approach, <strong>REITs</strong> 
-              offer real estate exposure without direct property management.
+              For instance, you might choose <strong>house flipping</strong> if
+              you’re interested in renovating properties for substantial,
+              shorter-term gains. Alternatively,{' '}
+              <strong>rental properties</strong> can provide steady cash flow
+              over time. And for those who want a more hands-off approach,{' '}
+              <strong>REITs</strong> offer real estate exposure without direct
+              property management.
             </p>
             <p className="text-gray-700">
-              Each approach has its pros, cons, and different levels of risk. 
-              Understanding these factors helps you select the strategy 
-              that aligns best with your goals and experience.
+              Each approach has its pros, cons, and different levels of risk.
+              Understanding these factors helps you select the strategy that
+              aligns best with your goals and experience.
             </p>
           </div>
         </div>
@@ -139,24 +180,23 @@ function Problem() {
               Finding the Ideal Approach with Machine Learning
             </h2>
             <p className="text-gray-700 mb-4">
-              Advances in <strong>reinforcement learning</strong>, simulation, 
-              and predictive analytics have transformed how we evaluate real 
-              estate investments. By analyzing historical data, market trends, 
-              and even economic indicators, ML models can simulate multiple 
+              Advances in <strong>reinforcement learning</strong>, simulation,
+              and predictive analytics have transformed how we evaluate real
+              estate investments. By analyzing historical data, market trends,
+              and even economic indicators, ML models can simulate multiple
               investment strategies in parallel.
             </p>
             <p className="text-gray-700 mb-4">
-              This allows you to see how each strategy might perform in 
-              different market conditions, providing clear performance metrics 
-              and risk assessments before you commit any real capital. 
-              In other words, machine learning lets you test the waters 
-              without taking a financial plunge.
+              This allows you to see how each strategy might perform in
+              different market conditions, providing clear performance metrics
+              and risk assessments before you commit any real capital. In other
+              words, machine learning lets you test the waters without taking a
+              financial plunge.
             </p>
             <p className="text-gray-700">
-              With robust simulations and real-time data analysis, 
-              you can refine your approach and make smarter, more 
-              confident investments that align with your risk tolerance 
-              and financial goals.
+              With robust simulations and real-time data analysis, you can
+              refine your approach and make smarter, more confident investments
+              that align with your risk tolerance and financial goals.
             </p>
           </div>
 
@@ -170,6 +210,9 @@ function Problem() {
           </div>
         </div>
       </motion.section>
+
+      {/* Footer */}
+      <Footer />
     </div>
   )
 }

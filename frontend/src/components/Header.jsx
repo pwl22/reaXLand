@@ -10,14 +10,24 @@ function Header() {
   const links = [
     { path: '/problem', label: 'Problem' },
     { path: '/solution', label: 'Solution' },
-    { path: '/contact', label: 'Contact Us' }
+    { path: '/contact', label: 'Contact Us' },
   ]
+
+  // Helper function to scroll to top & optionally close mobile menu
+  const handleLinkClick = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+    setIsOpen(false)
+  }
 
   return (
     <header className="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
       <nav className="container-custom">
         <div className="flex items-center justify-between h-16">
-          <Link to="/" className="text-2xl font-bold text-primary-600">
+          <Link
+            to="/"
+            className="text-2xl font-bold text-primary-600"
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          >
             LeftMove
           </Link>
 
@@ -27,6 +37,7 @@ function Header() {
               <Link
                 key={path}
                 to={path}
+                onClick={handleLinkClick}
                 className={`nav-link ${
                   location.pathname === path ? 'text-primary-600' : ''
                 }`}
@@ -58,12 +69,12 @@ function Header() {
                 <Link
                   key={path}
                   to={path}
+                  onClick={handleLinkClick}
                   className={`block px-3 py-2 rounded-md ${
                     location.pathname === path
                       ? 'bg-primary-50 text-primary-600'
                       : 'nav-link'
                   }`}
-                  onClick={() => setIsOpen(false)}
                 >
                   {label}
                 </Link>
