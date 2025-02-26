@@ -2,11 +2,8 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 
-import imageSaleSign from '../assets/House-and-man.jpeg'
 import Beng from '../assets/Bengaluru-house-data.jpeg'
-import economicterms from '../assets/economic-term.jpeg'
 import flowchart from '../assets/Flowchart.jpeg'
-import handcoin from '../assets/hand-coins.jpeg'
 import nn from '../assets/NN.jpeg'
 import rlml from '../assets/RL-ML.jpeg'
 function Footer() {
@@ -49,7 +46,7 @@ function Solution() {
   // Steps data
   const steps = [
     {
-      title: 'Step 1: Analyze & Clean the Dataset',
+      title: 'Step 1: Analysing & Cleaning the Dataset',
       description: `In this phase, we gather real estate data from various sources and 
       clean it by removing duplicates, handling missing values, and identifying 
       outliers. Data integrity is key to producing reliable predictions.`,
@@ -57,7 +54,7 @@ function Solution() {
         Beng,
     },
     {
-      title: 'Step 2: Build the Neural Network & Predict House Prices',
+      title: 'Step 2: Building the Neural Network & Predicting House Prices',
       description: `Using the cleaned data, we construct a neural network model 
       that processes features like location, square footage, and market trends 
       to output an estimated price for a given property.`,
@@ -66,15 +63,12 @@ function Solution() {
     },
     {
       title: 'Step 3: Simulation & Strategy for Investing',
-      description: `We run simulations under different market conditions—factoring in 
-      property location, number of bedrooms/bathrooms, public transport links, etc. 
-      Users can customize strategies such as short-term flipping vs. long-term holding 
-      to see potential outcomes.`,
+      description: `We run simulations under different market conditions—factoring in property location, number of bedrooms/bathrooms, public transport links, etc. Users can select strategies such as short-term flipping and. long-term holding to see potential outcomes.`,
       image:
         'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80',
     },
     {
-      title: 'Step 4: Apply Reinforcement Learning for Optimal Strategy',
+      title: 'Step 4: Applying Reinforcement Learning for Optimal Strategy',
       description: `Reinforcement learning algorithms observe and learn from both 
       historic and real-time market data. By simulating many investment decisions, 
       the model adapts to find the best approach for each user's specific goals 
@@ -105,10 +99,7 @@ function Solution() {
         >
           <h1 className="text-4xl font-bold text-gray-900 mb-4">Solution</h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Our end-to-end methodology for real estate investment involves
-            multiple steps, from cleaning data and building predictive models to
-            simulating market conditions and refining strategies with
-            reinforcement learning.
+          Our end-to-end methodology for real estate investment involves multiple steps, from cleaning data and building predictive models to simulating market conditions and refining strategies with reinforcement learning. With our machine learning model you can refine your investment skills today.
           </p>
 
           {/* Flowchart Image Placeholder */}
