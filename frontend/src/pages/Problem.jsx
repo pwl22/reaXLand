@@ -146,8 +146,9 @@ function Problem() {
               Risk-Free Environments
             </h2>
             <p className="text-gray-700 mb-4">
-              Investors can analyze trends, historic data, and economic indicators, but real estate always involves risk. Currently, no risk-free environment allows users to practice investment strategies without financial burden. LeftMove aims to change that using machine learning and reinforcement learning.
+              Investors can analyze trends, historic data, and economic indicators, but real estate always involves risk. Currently, no risk-free environment allows users to practice investment strategies without financial burden. LeftMove aims to change that using machine learning with the potential to develop strategies with reinforcement learning.
             </p>
+            
           </div>
 
           {/* Image Second on Mobile */}

@@ -3,9 +3,10 @@ import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 
 import Beng from '../assets/Bengaluru-house-data.jpeg'
-import flowchart from '../assets/Flowchart.jpeg'
+import flowchart from '../assets/flowchart2.jpeg'
 import nn from '../assets/NN.jpeg'
-import rlml from '../assets/RL-ML.jpeg'
+import aiml from '../assets/AIML.jpeg'
+import rise from '../assets/risehouse.jpeg'
 function Footer() {
   return (
     <footer className="bg-gray-100 text-gray-700 py-6 mt-12">
@@ -50,31 +51,26 @@ function Solution() {
       description: `In this phase, we gather real estate data from various sources and 
       clean it by removing duplicates, handling missing values, and identifying 
       outliers. Data integrity is key to producing reliable predictions.`,
-      image:
-        Beng,
+      image: Beng,
     },
     {
       title: 'Step 2: Building the Neural Network & Predicting House Prices',
       description: `Using the cleaned data, we construct a neural network model 
       that processes features like location, square footage, and market trends 
       to output an estimated price for a given property.`,
-      image:
-        nn,
+      image: nn,
     },
     {
-      title: 'Step 3: Simulation & Strategy for Investing',
-      description: `We run simulations under different market conditions—factoring in property location, number of bedrooms/bathrooms, public transport links, etc. Users can select strategies such as short-term flipping and. long-term holding to see potential outcomes.`,
-      image:
-        'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80',
+      title: 'Step 3: Machine Learning Application',
+      description: `LeftMove aims to provide a powerful machine learning tool that takes in user inputs such as number of bedrooms & bathrooms and location, combine this information with macroeconomic factors such as inflation, house price index and interest rates to accurately predict house prices. The machine learning model is evaluated using performance metrics like residuals and R^2.
+
+This tool can be used in simulations to provide a risk free environment for users to implement their investment strategies.`,
+      image: rise,
     },
     {
-      title: 'Step 4: Applying Reinforcement Learning for Optimal Strategy',
-      description: `Reinforcement learning algorithms observe and learn from both 
-      historic and real-time market data. By simulating many investment decisions, 
-      the model adapts to find the best approach for each user's specific goals 
-      and risk preferences.`,
-      image:
-        rlml,
+      title: 'Step 4: Tool for Reinforcement Learning',
+      description: `Our simulated environment is compatible with standardised Reinforcement Learning APIs, allowing real estate investors to not only evaluate their own strategies, but determine optimal ones. Through this synergy of machine learning and reinforcement learning, we deliver actionable insights for optimising real estate investment decisions.`,
+      image: aiml,
     },
     {
       title: 'Step 5: Performance Review',
@@ -82,8 +78,7 @@ function Solution() {
       overall profit or loss, what could have been optimized for greater returns, 
       and insights on location or property size. This feedback loop refines 
       future strategy recommendations.`,
-      image:
-        'https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=800&q=80',
     },
   ]
 
@@ -99,13 +94,17 @@ function Solution() {
         >
           <h1 className="text-4xl font-bold text-gray-900 mb-4">Solution</h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-          Our end-to-end methodology for real estate investment involves multiple steps, from cleaning data and building predictive models to simulating market conditions and refining strategies with reinforcement learning. With our machine learning model you can refine your investment skills today.
+            Our end-to-end methodology for real estate investment involves
+            multiple steps, from cleaning data and building predictive models to
+            simulating market conditions and refining strategies with
+            reinforcement learning. With our machine learning model you can
+            refine your investment skills today.
           </p>
 
-          {/* Flowchart Image Placeholder */}
+          {/* Flowchart Image */}
           <div className="mt-8 flex justify-center">
             <img
-              src= {flowchart}
+              src={flowchart}
               alt="Flowchart"
               className="rounded-lg shadow-lg w-full max-w-3xl"
             />
@@ -124,24 +123,19 @@ function Solution() {
           >
             <div className="grid md:grid-cols-2 gap-8 items-center container mx-auto px-4">
               {/* Text */}
-              <div
-                className={`${
-                  index % 2 === 0 ? 'order-1' : 'md:order-2'
-                }`}
-              >
+              <div className={`${index % 2 === 0 ? 'order-1' : 'md:order-2'}`}>
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">
                   {step.title}
                 </h2>
                 <p className="text-gray-700 leading-relaxed">
                   {step.description}
                 </p>
+
+
               </div>
+
               {/* Image */}
-              <div
-                className={`${
-                  index % 2 === 0 ? 'order-2' : 'md:order-1'
-                }`}
-              >
+              <div className={`${index % 2 === 0 ? 'order-2' : 'md:order-1'}`}>
                 <img
                   src={step.image}
                   alt={step.title}
