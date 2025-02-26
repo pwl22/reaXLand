@@ -91,7 +91,7 @@ function Contact() {
             Contact Us
           </h1>
           <p className="text-xl text-gray-600 mb-8 text-center">
-            Have questions about our house price prediction solution? We'd love to hear from you.
+            Have any questions about our machine learning solution? We'd love to hear from you.
           </p>
 
           <form onSubmit={handleSubmit} className="space-y-6">

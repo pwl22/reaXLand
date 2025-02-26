@@ -2,6 +2,13 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 
+import imageSaleSign from '../assets/House-and-man.jpeg'
+import Beng from '../assets/Bengaluru-house-data.jpeg'
+import economicterms from '../assets/economic-term.jpeg'
+import flowchart from '../assets/Flowchart.jpeg'
+import handcoin from '../assets/hand-coins.jpeg'
+import nn from '../assets/NN.jpeg'
+import rlml from '../assets/RL-ML.jpeg'
 function Footer() {
   return (
     <footer className="bg-gray-100 text-gray-700 py-6 mt-12">
@@ -47,7 +54,7 @@ function Solution() {
       clean it by removing duplicates, handling missing values, and identifying 
       outliers. Data integrity is key to producing reliable predictions.`,
       image:
-        'https://images.unsplash.com/photo-1569396116186-84e3ae7bade9?auto=format&fit=crop&w=800&q=80',
+        Beng,
     },
     {
       title: 'Step 2: Build the Neural Network & Predict House Prices',
@@ -55,7 +62,7 @@ function Solution() {
       that processes features like location, square footage, and market trends 
       to output an estimated price for a given property.`,
       image:
-        'https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=800&q=80',
+        nn,
     },
     {
       title: 'Step 3: Simulation & Strategy for Investing',
@@ -73,7 +80,7 @@ function Solution() {
       the model adapts to find the best approach for each user's specific goals 
       and risk preferences.`,
       image:
-        'https://images.unsplash.com/photo-1581091870620-3af882f06f47?auto=format&fit=crop&w=800&q=80',
+        rlml,
     },
     {
       title: 'Step 5: Performance Review',
@@ -107,7 +114,7 @@ function Solution() {
           {/* Flowchart Image Placeholder */}
           <div className="mt-8 flex justify-center">
             <img
-              src="https://images.unsplash.com/photo-1532619187606-f1a1353b67e4?auto=format&fit=crop&w=800&q=80"
+              src= {flowchart}
               alt="Flowchart"
               className="rounded-lg shadow-lg w-full max-w-3xl"
             />

@@ -1,6 +1,12 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import imageSaleSign from '../assets/House-and-man.jpeg'
+import Beng from '../assets/Bengaluru-house-data.jpeg'
+import economicterms from '../assets/economic-term.jpeg'
+import flowchart from '../assets/Flowchart.jpeg'
+import handcoin from '../assets/hand-coins.jpeg'
+import nn from '../assets/NN.jpeg'
+import rlml from '../assets/RL-ML.jpeg'
 // Make sure you have react-router-dom installed and configured for your routes
 import { Link } from 'react-router-dom'
 
@@ -72,8 +78,7 @@ function Problem() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-lg md:text-xl max-w-2xl mx-auto"
           >
-            Discover how machine learning powers informed decisions in real
-            estate investing—minimizing risks and maximizing returns.
+            Discover how machine learning can enable investors to make informed decisions with their real estate investments. Our aim is to minimise the risks involved and maximise returns.
           </motion.p>
         </div>
       </header>
@@ -93,18 +98,10 @@ function Problem() {
               Current Challenges in Real Estate
             </h2>
             <p className="text-gray-700 mb-4">
-              Investing in real estate can be daunting—especially for newcomers.
-              Property prices, market volatility, and complex regulations often
-              leave first-time investors overwhelmed. Even seasoned investors
-              find it challenging to consistently identify profitable
-              opportunities amidst changing economic conditions.
+            Investing in real estate can be overwhelming especially for beginners. Property prices, market volatility and complex regulations make this process extremely daunting especially for first time investors. People with little experience in this industry often lack the intuition and skills required to make returns on their investment (ROI).  It can be very easy to spend lots of time and money to develop these skills but this comes with a substantial risk. Understanding these challenges is the first step in making informed and reliable decisions
+            
             </p>
-            <p className="text-gray-700">
-              Without the right insights, it's easy to pour time and money into
-              ventures that don't yield the expected returns. Understanding
-              these challenges is the first step to making informed and
-              confident decisions.
-            </p>
+
           </div>
 
           {/* Image */}
@@ -130,8 +127,7 @@ function Problem() {
           {/* Image on left for this section (reverse order on mobile if you prefer) */}
           <div className="order-1 md:order-2">
             <img
-              src="https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?auto=format&fit=crop&q=80&w=800"
-              alt="Multiple Approaches"
+              src= {economicterms}
               className="rounded-lg shadow-lg w-full h-auto object-cover"
             />
           </div>
@@ -139,28 +135,12 @@ function Problem() {
           {/* Text Content */}
           <div className="order-2 md:order-1">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Multiple Approaches to Real Estate Investing
+              Investment Approach
             </h2>
             <p className="text-gray-700 mb-4">
-              There isn’t a one-size-fits-all method for real estate investing.
-              Some investors focus on flipping properties for quick profit,
-              others prefer long-term rental income, while some invest in REITs
-              (Real Estate Investment Trusts) to diversify their portfolios.
+            There isn't one correct way of investing in real estate. Some investors focus on flipping houses for a quick profit while others prefer to buy and hold a property until they are satisfied with their returns. Each approach has its advantages and disadvantages but knowing when to take a specific approach is a key factor in making this process as profitable as possible.
             </p>
-            <p className="text-gray-700 mb-4">
-              For instance, you might choose <strong>house flipping</strong> if
-              you’re interested in renovating properties for substantial,
-              shorter-term gains. Alternatively,{' '}
-              <strong>rental properties</strong> can provide steady cash flow
-              over time. And for those who want a more hands-off approach,{' '}
-              <strong>REITs</strong> offer real estate exposure without direct
-              property management.
-            </p>
-            <p className="text-gray-700">
-              Each approach has its pros, cons, and different levels of risk.
-              Understanding these factors helps you select the strategy that
-              aligns best with your goals and experience.
-            </p>
+
           </div>
         </div>
       </motion.section>
@@ -177,33 +157,17 @@ function Problem() {
           {/* Text Content */}
           <div>
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Finding the Ideal Approach with Machine Learning
+              Risk Free Environments
             </h2>
             <p className="text-gray-700 mb-4">
-              Advances in <strong>reinforcement learning</strong>, simulation,
-              and predictive analytics have transformed how we evaluate real
-              estate investments. By analyzing historical data, market trends,
-              and even economic indicators, ML models can simulate multiple
-              investment strategies in parallel.
-            </p>
-            <p className="text-gray-700 mb-4">
-              This allows you to see how each strategy might perform in
-              different market conditions, providing clear performance metrics
-              and risk assessments before you commit any real capital. In other
-              words, machine learning lets you test the waters without taking a
-              financial plunge.
-            </p>
-            <p className="text-gray-700">
-              With robust simulations and real-time data analysis, you can
-              refine your approach and make smarter, more confident investments
-              that align with your risk tolerance and financial goals.
+            Investors can research market trends, historic data and economic indicators as much as possible but at the end of the day they are taking a risk with their investment. This can be a costly mistake if you make the wrong decision. Currently there is not a risk free environment available for users to practice their investment strategies without the burden of investing real money. LeftMove aims to build a machine learning model that incorporates reinforcement learning to transform how users can evaluate their real estate investments and employ their new found skills in the real world. Try our simulation now!
             </p>
           </div>
 
           {/* Image */}
           <div className="w-full">
             <img
-              src="https://images.unsplash.com/photo-1589904087868-7cdb172f3b36?auto=format&fit=crop&q=80&w=800"
+              src={handcoin}
               alt="Machine Learning & Real Estate"
               className="rounded-lg shadow-lg w-full h-auto object-cover"
             />
